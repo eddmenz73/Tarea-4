@@ -5,17 +5,16 @@ list(ejemplos)
 #PROGRAMO METODO DE CONTEO
 #NUMEROS POSITIVOS
 n_positivos<-0
-for(i in 100:length(ejemplos)){
+for(i in 1: length(ejemplos)){
   if("positivo"==ejemplos[i]){
     n_positivos<-n_positivos+1
     }
 }
-
 list(ejemplos)
 length(ejemplos=="positivo")
 #NUMEROS NEGATIVOS
 n_negativos<-0
-for (i in 100:length(ejemplos)){
+for (i in 1:length(ejemplos)){
   if("negativo"==ejemplos[i]){
     n_negativos<-n_negativos+1
   }
@@ -24,7 +23,7 @@ list(ejemplos)
 length(ejemplos=="negativos")
 #NUMEROS NEUTROS
 n_neutros<-0
-for (i in 100:length(ejemplos)) {
+for (i in 1:length(ejemplos)) {
   if("negativo"==ejemplos[i]){
     n_neutros<-n_neutros+1
   }
@@ -63,14 +62,20 @@ menos1<-c("A","J","Q","K",10)
 neutros<-c(7:9)
 cuenta2<-0
 variable<-mas1
-for (i in 1:length(Cartas_Sacadas)){
-  for (n in 1:length(variable)){
-  if(Cartas_Sacadas[i]==mas1[n]){cuenta2<-cuenta2+1
-  }
-    }
-  variable<-menos1
-  for(n in 1:length(variable)){
-    if(Cartas_Sacadas[i]==menos1[n]){cuenta2<-cuenta2-1}
+for(i in 1:length(Cartas_Sacadas)){for (n in 1:length(variable)){
+  if(Cartas_Sacadas[i]==mas1[n]){
+    cuenta2<-cuenta2+1
   }
 }
+  variable<-menos1
+  for(n in 1:length(variable)){
+    if(Cartas_Sacadas[i]==menos1[n]){
+      cuenta2<-cuenta2-1
+      } 
+  }
 
+    
+    
+    
+    
+    
